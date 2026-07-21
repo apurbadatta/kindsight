@@ -1,11 +1,14 @@
 "use client";
 
-import { FiChevronDown, FiUser } from "react-icons/fi";
+import { useState } from "react";
+import { FiChevronDown, FiUser, FiMenu, FiX } from "react-icons/fi";
 import { HiSparkles } from "react-icons/hi2";
 
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
@@ -54,19 +57,68 @@ export default function Navbar() {
         </nav>
 
         {/* CTA Buttons */}
-        <div className="flex items-center gap-3">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all cursor-pointer active:scale-95">
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 rounded-full shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all cursor-pointer active:scale-95">
             Get a Demo
           </button>
+
           <button
             aria-label="User Account"
-            className="w-9 h-9 rounded-full border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:border-gray-300 transition-all cursor-pointer"
+            className="hidden sm:flex w-9 h-9 rounded-full border border-gray-200 bg-gray-50 items-center justify-center text-gray-600 hover:bg-gray-100 hover:border-gray-300 transition-all cursor-pointer"
           >
             <FiUser className="w-4 h-4 text-gray-600" />
           </button>
+
+          {/* Mobile Menu Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            className="md:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+          >
+            {mobileMenuOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Slide-down Dropdown Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-b border-gray-100 bg-white/98 backdrop-blur-lg px-4 pt-3 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top duration-200">
+          <a
+            href="#"
+            className="block text-sm font-semibold text-gray-700 hover:text-orange-600 py-2 border-b border-gray-50"
+          >
+            Who we Serve
+          </a>
+          <a
+            href="#"
+            className="flex items-center justify-between text-sm font-semibold text-gray-700 hover:text-orange-600 py-2 border-b border-gray-50"
+          >
+            <span>Product</span>
+            <span className="bg-orange-100 text-orange-600 text-[10px] font-semibold px-2 py-0.5 rounded-full border border-orange-200/60">
+              New
+            </span>
+          </a>
+          <a
+            href="#"
+            className="block text-sm font-semibold text-gray-700 hover:text-orange-600 py-2 border-b border-gray-50"
+          >
+            Company
+          </a>
+          <a
+            href="#"
+            className="block text-sm font-semibold text-gray-700 hover:text-orange-600 py-2"
+          >
+            Resources
+          </a>
+          <div className="pt-2 flex items-center gap-3">
+            <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-semibold py-2.5 rounded-full shadow-md text-center">
+              Get a Demo
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
+
 

@@ -18,27 +18,27 @@ import { HiSparkles, HiMiniSparkles } from "react-icons/hi2";
 
 export default function Dashboard() {
   return (
-    <section className="pb-16 bg-white relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section className="relative z-10">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
         {/* Main Floating Dashboard Card Container */}
         <div className="bg-white rounded-2xl border border-gray-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.08)] overflow-hidden transition-all">
           
           {/* 1. App Top Window Header Bar */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-gray-50/50">
+          <div className="flex flex-wrap items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 border-b border-gray-100 bg-gray-50/50 gap-2">
             {/* Left: Brand & Navigation */}
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-md bg-orange-500 flex items-center justify-center text-white shadow-xs">
-                  <HiSparkles className="w-3.5 h-3.5 text-white" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-orange-500 flex items-center justify-center text-white shadow-xs">
+                  <HiSparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                 </div>
-                <span className="font-bold text-gray-900 text-sm tracking-tight">
+                <span className="font-bold text-gray-900 text-xs sm:text-sm tracking-tight">
                   Kindsight
                 </span>
               </div>
 
               {/* Active Tab */}
-              <div className="flex items-center gap-2 ml-2">
-                <button className="bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xs cursor-pointer">
+              <div className="flex items-center gap-2 ml-1 sm:ml-2">
+                <button className="bg-gray-900 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full flex items-center gap-1 sm:gap-1.5 shadow-xs cursor-pointer">
                   <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
                   Dashboard
                 </button>
@@ -59,7 +59,7 @@ export default function Dashboard() {
             </div>
 
             {/* Right: Quick actions & User profile */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div className="hidden md:flex items-center gap-1 text-gray-400">
                 <button aria-label="Notifications" className="p-1.5 hover:text-gray-600 rounded-md hover:bg-gray-100 transition-colors">
                   <FiBell className="w-4 h-4" />
@@ -70,9 +70,9 @@ export default function Dashboard() {
               </div>
 
               {/* User Avatar */}
-              <div className="flex items-center gap-2.5 pl-3 border-l border-gray-200">
+              <div className="flex items-center gap-2 pl-2 sm:pl-3 border-l border-gray-200">
                 <img
-                  className="w-7 h-7 rounded-full object-cover ring-2 ring-orange-200"
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover ring-2 ring-orange-200"
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80"
                   alt="Rafatar Albert"
                 />
@@ -85,34 +85,34 @@ export default function Dashboard() {
           </div>
 
           {/* 2. Inner Dashboard Canvas Body */}
-          <div className="p-5 sm:p-6 bg-gray-50/30">
+          <div className="p-3 sm:p-5 lg:p-6 bg-gray-50/30">
             
             {/* Title Bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
               <div className="flex items-center gap-2">
-                <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                <h2 className="text-lg sm:text-2xl font-extrabold text-gray-900 tracking-tight">
                   Fundraising Dashboard
                 </h2>
                 <button aria-label="Edit title" className="text-gray-400 hover:text-gray-600 transition-colors p-1">
-                  <FiEdit3 className="w-4 h-4" />
+                  <FiEdit3 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </button>
               </div>
 
               {/* Date & Actions Bar */}
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-xs text-gray-600 shadow-2xs font-medium">
-                  <FiCalendar className="w-3.5 h-3.5 text-gray-500" />
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <div className="flex items-center gap-1.5 sm:gap-2 bg-white border border-gray-200 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs text-gray-600 shadow-2xs font-medium">
+                  <FiCalendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-gray-500" />
                   <span>14 November</span>
                   <span className="font-semibold text-gray-900">2026</span>
                 </div>
 
-                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-xs text-gray-600 shadow-2xs">
+                <div className="flex items-center gap-1.5 sm:gap-2 bg-white border border-gray-200 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs text-gray-600 shadow-2xs">
                   <div className="flex -space-x-1.5 overflow-hidden">
                     <img className="w-4 h-4 rounded-full ring-1 ring-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" />
                     <img className="w-4 h-4 rounded-full ring-1 ring-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Avatar" />
                   </div>
-                  <button className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-gray-900 transition-colors">
-                    <FiShare2 className="w-3.5 h-3.5" />
+                  <button className="flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-gray-900 transition-colors">
+                    <FiShare2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     Share
                   </button>
                 </div>
@@ -120,7 +120,7 @@ export default function Dashboard() {
             </div>
 
             {/* 3 Main Columns Dashboard Cards Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               
               {/* Card 1: TOTAL RAISED */}
               <div className="bg-white rounded-xl p-5 border border-gray-200/80 shadow-2xs flex flex-col justify-between">

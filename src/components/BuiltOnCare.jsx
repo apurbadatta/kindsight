@@ -5,11 +5,11 @@ import { FiStar, FiAward } from "react-icons/fi";
 
 export default function BuiltOnCare() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15] max-w-xl">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15] max-w-xl">
             Built On Care, Community, And Commitment To Your Mission
           </h2>
           <span className="text-xs font-bold uppercase tracking-widest text-gray-400 pb-1">

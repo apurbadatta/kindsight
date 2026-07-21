@@ -2,9 +2,9 @@
 
 export default function LogoPartners() {
   return (
-    <section className="py-12 bg-white border-t border-b border-gray-100/80">
+    <section className="py-8 sm:py-12 bg-white border-t border-b border-gray-100/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-wrap items-center justify-between gap-8 opacity-45 hover:opacity-80 transition-opacity grayscale hover:grayscale-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:flex items-center justify-between gap-6 sm:gap-8 opacity-45 hover:opacity-80 transition-opacity grayscale hover:grayscale-0 justify-items-center">
           
           {/* 1. The Nature Conservancy */}
           <div className="flex items-center gap-2 text-gray-700">
